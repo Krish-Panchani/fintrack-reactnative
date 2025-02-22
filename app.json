@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expo-finance-app",
-    "slug": "expo-finance-app",
+    "name": "Fintrack",
+    "slug": "fintrack",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.krishpanchani.fintrack"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +37,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": "https://api-ekharcha.vercel.app"
+      },
+      "eas": {
+        "projectId": "d0755e51-f364-4ae5-9b04-b0c5dd82a489"
+      }
     }
   }
 }
