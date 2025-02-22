@@ -10,6 +10,7 @@ import { formatCurrency } from "@/helper/formatCurrency";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import ReanimatedSwipeable from "react-native-gesture-handler/ReanimatedSwipeable";
 import Animated, { FadeInDown } from "react-native-reanimated";
+import * as Haptics from "expo-haptics";
 
 // Define your icon mapping here based on category
 const categoryIcons = {
@@ -69,6 +70,7 @@ const RecentTransactions = () => {
   }
 
   const handleDelete = (id: string, index: number) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     const transaction = transactions[index]; // Get the transaction by index
     const amountFormatted =
       transaction.type === TransactionType.EXPENSE

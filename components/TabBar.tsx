@@ -8,6 +8,7 @@ import Animated, {
 } from "react-native-reanimated";
 import { useEffect, useState } from "react";
 import { colors } from "@/constants/theme";
+import * as Haptics from "expo-haptics";
 
 const TabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
   const [dimensions, setDimensions] = useState({ height: 20, width: 100 });
@@ -51,7 +52,7 @@ const TabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
       />
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
-        const label =
+        const label: any =
           options.tabBarLabel !== undefined
             ? options.tabBarLabel
             : options.title !== undefined
@@ -61,6 +62,7 @@ const TabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
         const isFocused = state.index === index;
 
         const onPress = () => {
+          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
           const event = navigation.emit({
             type: "tabPress",
             target: route.key,

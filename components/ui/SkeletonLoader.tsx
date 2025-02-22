@@ -11,7 +11,6 @@ const SkeletonLoader = ({
   shape = "rectangle", // Shape: 'rectangle' or 'circle'
   size = { width: 320, height: 50 }, // Size: { width, height }
   count = 1, // Number of skeleton elements
-  gradientColors = [colors.neutral900, colors.neutral700, colors.neutral800], // Gradient colors
   borderRadius = 10, // Border radius for roundness (applies to rectangle and circle)
   animationSpeed = 1000, // Speed of shimmer animation (in ms)
 }) => {
@@ -48,7 +47,7 @@ const SkeletonLoader = ({
           ]}
         >
           <LinearGradient
-            colors={gradientColors}
+            colors={[colors.neutral900, colors.neutral700, colors.neutral800]}
             style={styles.gradient}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}

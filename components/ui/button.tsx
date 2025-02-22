@@ -24,7 +24,7 @@ interface ButtonProps {
   children: React.ReactNode;
   style?: ViewStyle;
   textStyle?: TextStyle;
-  iconName?: string; // Icon name for Ionicon
+  iconName?: keyof typeof Ionicons.glyphMap; // Icon name for Ionicon
   iconSize?: number; // Icon size
   iconColor?: string; // Icon color
   iconPosition?: "left" | "right"; // Icon position (left or right of text)
