@@ -47,21 +47,6 @@ export default function RootLayout() {
         <Stack>
           <Stack.Screen name="(auth)" options={{ headerShown: false }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          {/* <Stack.Screen
-            name="add-expense"
-            options={{
-              headerShown: true,
-            }}
-          /> */}
-          <Stack.Screen
-            name="add-income"
-            options={{
-              headerShown: true,
-              presentation: "formSheet",
-              sheetAllowedDetents: [0.5, 0.75, 1],
-              sheetGrabberVisible: true,
-            }}
-          />
 
           <Stack.Screen name="+not-found" />
         </Stack>
